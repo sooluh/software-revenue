@@ -206,7 +206,7 @@ lr.fit(X_train, y_train)
 pred = lr.predict(X_test)
 ```
 
-Terakhir, saya perlu mengetahui berapa score yang didapatkan dari model yang telah kita buat.
+Terakhir, saya perlu mengetahui berapa score yang didapatkan dari model yang telah saya buat.
 
 ```py
 score = lr.score(X_test, y_test)
