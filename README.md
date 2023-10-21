@@ -165,6 +165,8 @@ Selanjutnya, saya perlu memeriksa apakah dataframe ini memiliki value yang koson
 sns.heatmap(df.isnull())
 ```
 
+![](./assets/is-null.png)
+
 Saya perlu melihat ringkasan statistik dari DataFrame tersebut dengan kode sebagai berikut.
 
 ```py
@@ -177,6 +179,8 @@ Selanjutnya saya perlu memeriksa/mengukur matriks korelasi antara semua pasangan
 plt.figure(figsize=(10,8))
 sns.heatmap(df.corr(), annot=True)
 ```
+
+![](./assets/matrix.png)
 
 ## Modeling
 
