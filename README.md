@@ -264,4 +264,6 @@ Dengan kode di-atas, saya mendapatkan hasil sekitar 93.5% yang berarti model ini
 
 ## Deployment
 
-Coming Soon
+![](./assets/streamlit.png)
+
+[Software Revenue Insights](https://software-revenue.streamlit.app)
