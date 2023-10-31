@@ -53,7 +53,7 @@ Dataset "Software Usage Promotion Campaign Uplift Modeling" yang tersedia di Kag
 
 Selain itu, dataset ini juga mencatat informasi mengenai insentif yang diberikan kepada pelanggan, seperti dukungan teknis dan diskon, serta jumlah pendapatan yang dihasilkan dari penjualan perangkat lunak dalam setahun setelah kampanye promosi diluncurkan. Dataset ini menjadi sumber data yang berharga bagi para analis dan peneliti untuk mengidentifikasi faktor-faktor yang berpengaruh dalam meningkatkan penggunaan produk perangkat lunak dan memahami dampak berbagai insentif pada hasil penjualan.
 
-[Software Usage Promotion Campaign Uplift Modeling](https://www.kaggle.com/datasets/hwwang98/software-usage-promotion-campaign-uplift-model).
+Datasets: [Software Usage Promotion Campaign Uplift Modeling](https://www.kaggle.com/datasets/hwwang98/software-usage-promotion-campaign-uplift-model)
 
 ### Variabel-variabel
 
@@ -278,12 +278,6 @@ Dengan kode di-atas, saya mendapatkan hasil sekitar 93.5% yang berarti model ini
 
 ## Deployment
 
-![](./assets/streamlit.png)
-
 [Software Revenue Insights](https://software-revenue.streamlit.app)
 
-## TO-DO
-
-- [x] EDA Chart (+ penjelasan)
-- [x] Tipe data dan min-max value pada variable data understanding
-- [ ] Revisi form input streamlit
+![](./assets/deployment.jpeg)

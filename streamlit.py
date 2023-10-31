@@ -5,28 +5,32 @@ model = pickle.load(open('./dataset/usage.sav', 'rb'))
 
 st.header('Software Revenue Insights', divider=True)
 
-st.write('**Apakah Pelanggan Memiliki Kantor Global?**')
-is_global = st.checkbox('Ceklis untuk Ya', key='is_global')
+col1, col2 = st.columns(2)
 
-st.write('**Apakah Pelanggan Merupakan Konsumen Besar di Industri Mereka?**')
-is_major = st.checkbox('Ceklis untuk Ya', key='is_major')
+with col1:
+    st.write('**Pelanggan Memiliki Kantor Global?**')
+    is_global = st.checkbox('Ceklis untuk Ya', key='is_global')
 
-st.write('**Apakah Pelanggan Merupakan Small Medium Corporation (SMC)?**')
-is_smc = st.checkbox('Ceklis untuk Ya', key='is_smc')
+    st.write('**Pelanggan Merupakan Konsumen Besar?**')
+    is_major = st.checkbox('Ceklis untuk Ya', key='is_major')
 
-st.write('**Apakah Bisnis Pelangan Bersifat Komersil?**')
-is_commercial = st.checkbox('Ceklis untuk Ya', key='is_commercial')
+    st.write('**Pelanggan Merupakan SMC?**')
+    is_smc = st.checkbox('Ceklis untuk Ya', key='is_smc')
 
-it_spend = st.number_input('**Uang Yang Dihabiskan Pelanggan Untuk Pembelian TI**')
-employee_count = st.number_input('**Jumlah Karyawan di Organisasi Pelanggan**')
-pc_count = st.number_input('**Jumlah PC yang Digunakan Pelanggan**')
-size = st.number_input('**Ukuran Pelanggan Berdasarkan Pendapatan Tahunan**')
+with col2:
+    st.write('**Bisnis Pelangan Bersifat Komersil?**')
+    is_commercial = st.checkbox('Ceklis untuk Ya', key='is_commercial')
 
-st.write('**Apakah Pelanggan Menerima Dukungan Teknis?**')
-it_support = st.checkbox('Ceklis untuk Ya', key='it_support')
+    st.write('**Pelanggan Menerima Dukungan Teknis?**')
+    it_support = st.checkbox('Ceklis untuk Ya', key='it_support')
 
-st.write('**Apakah Pelanggan Diberi Diskon?**')
-is_discount = st.checkbox('Ceklis untuk Ya', key='is_discount')
+    st.write('**Pelanggan Diberi Diskon?**')
+    is_discount = st.checkbox('Ceklis untuk Ya', key='is_discount')
+
+it_spend = st.number_input('**Uang Yang Dihabiskan Pelanggan Untuk Pembelian TI**', 1161, 260000)
+employee_count = st.number_input('**Jumlah Karyawan di Organisasi Pelanggan**', 10, 535)
+pc_count = st.number_input('**Jumlah PC yang Digunakan Pelanggan**', 6, 407)
+size = st.number_input('**Ukuran Pelanggan Berdasarkan Pendapatan Tahunan**', 10100, 766000)
 
 if st.button('Submit'):
     result = model.predict([
