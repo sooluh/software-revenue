@@ -267,3 +267,9 @@ Dengan kode di-atas, saya mendapatkan hasil sekitar 93.5% yang berarti model ini
 ![](./assets/streamlit.png)
 
 [Software Revenue Insights](https://software-revenue.streamlit.app)
+
+## TO-DO
+
+- [ ] EDA Chart (+ penjelasan)
+- [ ] Tipe data dan min-max value pada variable data understanding
+- [ ] Revisi form input streamlit
