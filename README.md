@@ -180,6 +180,22 @@ sns.heatmap(df.corr(), annot=True)
 
 ![](./assets/matrix.png)
 
+Kemudian saya ingin melihat frekuensi dari fitur pendapatan
+
+```py
+sns.histplot(df['Revenue'], kde=True)
+```
+
+![](./assets/distribution.png)
+
+Lalu, perlu saya visualisasikan hubungan antara Revenue (y) dan IT Spend (x) dengan mempertimbangkan Discount.
+
+```py
+sns.scatterplot(y=df['Revenue'], x=df['IT Spend'], hue=df['Discount'])
+```
+
+![](./assets/scatter.png)
+
 ## Modeling
 
 Pada tahap modeling, saya memasukkan semua fitur sebagai variable input-an dan menyisakan satu yaitu Revenue sebagai output-nya.
@@ -268,6 +284,6 @@ Dengan kode di-atas, saya mendapatkan hasil sekitar 93.5% yang berarti model ini
 
 ## TO-DO
 
-- [ ] EDA Chart (+ penjelasan)
+- [x] EDA Chart (+ penjelasan)
 - [x] Tipe data dan min-max value pada variable data understanding
 - [ ] Revisi form input streamlit
