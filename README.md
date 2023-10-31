@@ -57,21 +57,19 @@ Selain itu, dataset ini juga mencatat informasi mengenai insentif yang diberikan
 
 ### Variabel-variabel
 
-- **Global Flag**: Apakah pelanggan memiliki kantor global (1 untuk ya, 0 untuk tidak).
-- **Major Flag**: Apakah pelanggan merupakan konsumen besar di industri mereka (1 untuk ya, 0 untuk tidak).
-- **SMC Flag**: Apakah pelanggan merupakan Small Medium Corporation (SMC) (1 untuk ya, 0 untuk tidak).
-- **Commercial Flag**: Apakah bisnis pelanggan bersifat komersial (1 untuk ya, 0 untuk tidak).
-- **IT Spend**: Jumlah uang yang dihabiskan pelanggan untuk pembelian terkait TI.
-- **Employee Count**: Jumlah karyawan di organisasi pelanggan.
-- **PC Count**: Jumlah PC yang digunakan oleh pelanggan.
-- **Size**: Ukuran pelanggan berdasarkan pendapatan tahunan total.
-- **Tech Support**: Apakah pelanggan menerima dukungan teknis (1 untuk ya, 0 untuk tidak).
-- **Discount**: Apakah pelanggan diberi diskon (1 untuk ya, 0 untuk tidak).
-- **Revenue**: Pendapatan yang dihasilkan dari pelanggan dalam bentuk pembelian perangkat lunak dalam setahun setelah kampanye promosi.
+- **Global Flag** `bool` (1: True. 0: False): Apakah pelanggan memiliki kantor global.
+- **Major Flag** `bool` (1: True. 0: False): Apakah pelanggan merupakan konsumen besar di industri mereka.
+- **SMC Flag** `bool` (1: True. 0: False): Apakah pelanggan merupakan Small Medium Corporation (SMC).
+- **Commercial Flag** `bool` (1: True. 0: False): Apakah bisnis pelanggan bersifat komersial.
+- **IT Spend** `int` (min: 1161. max: 260k): Jumlah uang yang dihabiskan pelanggan untuk pembelian terkait TI.
+- **Employee Count** `int` (min: 10. max: 535): Jumlah karyawan di organisasi pelanggan.
+- **PC Count** `int` (min: 6. max: 407): Jumlah PC yang digunakan oleh pelanggan.
+- **Size** `int` (min: 10,1k. max: 766k): Ukuran pelanggan berdasarkan pendapatan tahunan total.
+- **Tech Support** `bool` (1: True. 0: False): Apakah pelanggan menerima dukungan teknis.
+- **Discount** `bool` (1: True. 0: False): Apakah pelanggan diberi diskon.
+- **Revenue** `int` (min: -617. max: 86k): Pendapatan yang dihasilkan dari pelanggan dalam bentuk pembelian perangkat lunak dalam setahun setelah kampanye promosi.
 
 ## Data Preparation
-
-Pada tahap ini, saya menggunakan metode EDA untuk melakukan preparasi data.
 
 **Suppress Warning Messages**
 
@@ -213,7 +211,7 @@ score = lr.score(X_test, y_test)
 print('akurasi model regresi linier = ', score * 100)
 ```
 
-Dan Alhamdulillah, saya mendapatkan score yang cukup memuaskan, yakni 93%. Saya akan coba lakukan pengetesan menggunakan data dumy seperti dibawah ini.
+Dan Alhamdulillah, saya mendapatkan score yang cukup memuaskan, yakni 93.5%. Saya akan coba lakukan pengetesan menggunakan data dumy seperti dibawah ini.
 
 ```py
 input_data = np.array([[0, 0, 1, 1, 18000, 9, 9, 987500, 1, 0]])
@@ -271,5 +269,5 @@ Dengan kode di-atas, saya mendapatkan hasil sekitar 93.5% yang berarti model ini
 ## TO-DO
 
 - [ ] EDA Chart (+ penjelasan)
-- [ ] Tipe data dan min-max value pada variable data understanding
+- [x] Tipe data dan min-max value pada variable data understanding
 - [ ] Revisi form input streamlit
